@@ -1,5 +1,79 @@
 /* Nav Bar CSS */
+.topnav{
+    height: 40px;
+    background-color: #D3D3D3;
+    font-size: 25px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+.name{
+    position: absolute;
+    margin-left: 20px;
+}
+.one{
+    color: blue;
+    margin-left: 1008px;
+    position: absolute;
+}
+.two{
+    color: blue;
+    margin-left: 1120px;
+    position: absolute;
+}
+.three{
+    color: blue;
+    margin-left: 1250px;
+    position: absolute;
+}
 
+.pro1{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+.pro2{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+.pro3{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+.pro4{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+.pro5{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+.pro6{
+    margin-top: 20px;
+    border: solid 1px black;
+    height: 400px;
+    width: 200px;
+}
+
+.profile{
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.container{
+    margin-top: 60px;
+}
 
 /* Header CSS */
 

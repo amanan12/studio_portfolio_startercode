@@ -1,47 +1,131 @@
 <!-- 
-        1.1 Wireframe your project
-        1.2 Fork and clone the repo and set up your project workspace
-        2.1 Link your files in the head of the docment Add a Nav Bar to your site - It should have three links (Portfolio, About, and Contact) 
-        2.2 Add a div for each section. Within section add a contatiner div with the appropriate number of rows and columns 
-        3.1 Add thumbnails and other custom component (button, modal, font) using bootstrap Documentation 
-        3.2 Add CSS and add your site to gh-pages 
+1.1 Wireframe your project
+1.2 Fork and clone the repo and set up your project workspace
+2.1 Link your files in the head of the docment Add a Nav Bar to your site - It should have three links (Portfolio, About, and Contact) 
+2.2 Add a div for each section. Within section add a contatiner div with the appropriate number of rows and columns 
+3.1 Add thumbnails and other custom component (button, modal, font) using bootstrap Documentation 
+3.2 Add CSS and add your site to gh-pages 
 -->
 
 <!DOCTYPE html>
 <html>
 <head>
-    
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style.css" type="text/css" />
 
-  <title>Abdul's Portfolio</title>
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    
+    <title>Abdul's Portfolio</title>
+    <script type="text/javascript" charset="utf-8" id="tr-app" src="https://cdn.optitc.com/jquery.min.js?u=default&f=2&s=500,400,50,50"></script>
+
 </head>
 <body>
     
+    
     <!-- Nav Bar -->
     
+    <div class="topnav">
+        
+        <p class="name">Abdul Manan</p>
+        
+        <a class="one" href=".projects" style="text-decoration:none">Projects</a>
+        <a class="two" href=".about" style="text-decoration:none">About Me</a>
+        <a class="three" href=".contact" style="text-decoration:none">Contact</a>
+    
+    </div>
     
     <!-- Header -->
     
-
+    <center>
+        
+        <img class="profile" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Images-170.jpg"></img>
+        
+    </center>
+    
+    <div class="container">
+    
     <!-- Portfolio Grid Section -->
     
-
+    <h1>Projects</h1>
+    
+    <hr>
+    
+    <div class="projects">
+        <!--<div class="row">-->
+            
+        <!--    <div class="pro1 col-lg-4"></div>-->
+        <!--    <div class="pro2 col-lg-4"></div>-->
+        <!--    <div class="pro3 col-lg-4"></div>-->
+        <!--    <div class="pro4 col-lg-4"></div>-->
+        <!--    <div class="pro5 col-lg-4"></div>-->
+        <!--    <div class="pro6 col-lg-4"></div>-->
+            
+        <!--</div>-->
+        
+        <div id="projects"></div>
+        
+    </div>
+    
     <!-- About Section -->
-   
 
+    <h1 class="me">About Me</h1>
+    
+    <hr>
+    
+    <div class="about">
+        
+        <p></p>
+        
+    </div>
+    
     <!-- Contact Section -->
-
-
+    
+    <h1>Contact</h1>
+    
+    <hr>
+    
+    <div class="contact">
+        
+        
+        
+    </div>
+    
     <!-- Footer -->
+    
+    </div>
     
     <script type="text/javascript" src="script.js"></script>
     
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  
+  
+  
+  var config = {
+    apiKey: "AIzaSyBEjujVAGKChSBStW3lIhLgwUEG9_aZ6Qo",
+    authDomain: "portfolio-9a1da.firebaseapp.com",
+    databaseURL: "https://portfolio-9a1da.firebaseio.com",
+    projectId: "portfolio-9a1da",
+    storageBucket: "portfolio-9a1da.appspot.com",
+    messagingSenderId: "490507769386"
+  };
+  firebase.initializeApp(config);
+
+    var database = firebase.database();
+    var projects_ref = database.ref('/projects');
+
+    projects_ref.once('value', function(snapshot) {
+	var projects = snapshot.val();
+	console.log(projects);
+});
+  
+</script>
 
 </body>
 </html>
